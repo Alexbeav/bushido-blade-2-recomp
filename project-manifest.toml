@@ -18,13 +18,13 @@ entry_point = "0x800836EC"
 [framework]
 name = "PSXRecomp"
 repository = "https://github.com/Alexbeav/psxrecomp.git"
-commit = "8d0eab59e3e70094d8e1eff2bb0b658024e8c484"
-tree = "3ecc7f6cd1be91037a8504f8e82b9d15129589b6"
+commit = "f2731f8a0fc38444dc6deb4a05100f7abc7eeddb"
+tree = "7628adbc47f968057db6f17272fdefa9a5706adc"
 recomp_ui_commit = "493434ab1893e8a80b8bf2bad0304da9110cf12b"
 license = "See the pinned dependency license; this binding does not approve commercial use."
 
 [release_binding]
-source_commit = "8d0eab59e3e70094d8e1eff2bb0b658024e8c484"
+source_commit = "f2731f8a0fc38444dc6deb4a05100f7abc7eeddb"
 current_title_version = "0.1.0"
 current_public_topology = "owned-input-kit-only"
 current_public_release = "none"
