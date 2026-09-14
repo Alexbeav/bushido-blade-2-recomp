@@ -1,0 +1,56 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Bushido Blade 2"
+id = "SLUS-00663"
+players = 2
+exe = "disc/slus_006.63"
+disc = "disc/Bushido Blade 2 (USA).cue"
+load_address = "0x80010000"
+entry_pc = "0x800836EC"
+text_size = "0x00093800"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Bushido Blade 2 (USA).bin"
+cue_name = "Bushido Blade 2 (USA).cue"
+boot_exe = "slus_006.63"
+known_sizes = [701714496]
+known_md5 = [
+  "7ca449137357040901724c3ccedede33",
+]
+known_sha1 = [
+  "89c1ad4025bfdb78e387ae9acc43e33b7f51db19",
+]
+known_crc32 = [
+  "39aade1a",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH1001.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+window_title = "Bushido Blade 2 Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 1
+required_disc_fp = "3ad066bd579a02d79993f555fba62d195ebc1eaaab1c91bf8d796800405fbc6a"
